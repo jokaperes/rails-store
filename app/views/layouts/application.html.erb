@@ -22,11 +22,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-black text-white">
       <div class="notice"><%= notice %></div>
       <nav>
-      <%= link_to "Home", root_path %>
-      <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+         <div class="text-xl">
+            <%= link_to "Home", root_path %>
+            <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+          </div>
       </nav>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
